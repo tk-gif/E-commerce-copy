@@ -15,32 +15,42 @@
     // 2. HARDCODED FALLBACK DATA (Backend offline hone par yeh show hoga)
     const fallbackProducts = [
         { 
-            id: '101', 
-            name: 'Pure Cotton Casual Slim-Fit Shirt', 
+            id: '601', 
+            name: 'Floral Beauty', 
             price: 599.00, 
-            image: 'assets/images/mensShirt.jpg', 
-            category: 'shirt', 
-            brand: 'Adidas',
+            image: 'assets/images/ColourfulDress.jpg', 
+            category: 'women', 
+            brand: 'Lyraa',
             stock: 12, 
             rating: 5 
         },
         { 
-            id: '102', 
-            name: 'Comfort Fit Classic Denim Jeans', 
+            id: '602', 
+            name: 'Fitted Shirt', 
             price: 699.00, 
-            image: 'assets/images/mensJeans.avif', 
-            category: 'jeans', 
-            brand: 'Levis',
+            image: 'assets/images/MaroonShirt.jpg', 
+            category: 'men', 
+            brand: 'Polo',
             stock: 25, 
             rating: 4 
         },
         { 
-            id: '103', 
-            name: 'Modern Denim Outerwear Jacket', 
+            id: '603', 
+            name: 'Women Ethics', 
             price: 899.00, 
-            image: 'assets/images/MensJacket.webp', 
-            category: 'jacket', 
+            image: 'assets/images/RedKurti.webp', 
+            category: 'women', 
             brand: 'Zara',
+            stock: 8, 
+            rating: 5 
+        },
+        { 
+            id: '604', 
+            name: 'Men Traditional', 
+            price: 899.00, 
+            image: 'assets/images/BoyTraditional.jpg', 
+            category: 'men', 
+            brand: 'H&M',
             stock: 8, 
             rating: 5 
         }
@@ -148,6 +158,7 @@
         const starsHtml = '<i class="fas fa-star"></i>'.repeat(product.rating || 5);
         
         div.innerHTML = `
+            <span class = "bogo-badge">BUY 1<br>GET 1<br>FREE</span>
             <img src="${product.image || 'assets/images/default.jpg'}" alt="${product.name}" onerror="this.src='assets/images/default.jpg';">
             <div class="des">
                 <span>${product.brand || 'Adidas'}</span>
